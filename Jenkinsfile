@@ -12,6 +12,8 @@ pipeline{
         stage('TEST2'){
              steps{
                  echo 'Test2'
+                 emailext body: 'TEST', subject: 'TEST', to: 'Gupta@local.com'
+
              }
         }
     }
@@ -22,6 +24,7 @@ pipeline{
         }
         failure {
             echo "Failed State"
+            emailext body: 'TEST', subject: 'TEST', to: 'gupta@local.com'
         }
         cleanup {
             echo "Common steps"
