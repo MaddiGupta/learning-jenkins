@@ -15,16 +15,17 @@ pipeline{
              }
         }
     }
-}
 
-post {
- fixed {
-  echo "Hello"
- }
- failure{
-  echo "failed state"
- }
- cleanup{
-  echo "common steps"
- }
+    post {
+     fixed {
+      echo "Hello"
+     }
+     failure{
+      echo "failed state"
+     }
+     cleanup{
+      echo "common steps"
+     }
+    }
+
 }
