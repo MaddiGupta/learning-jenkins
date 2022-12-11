@@ -39,24 +39,25 @@
 
 //
 
+//
+
 pipeline{
     agent any
-        tools {
-            maven 'maven'
-        }
+
         stages{
-            stage('Maven Version'){
-                input {
-                    message "Should we continue?"
-                    ok "Yes, we should."
-                    submitter "alice,bob"
-                    parameters {
-                        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                    }
+            stage('one'){
+                steps {
+                    echo 'ONE'
                 }
-            steps {
-                sh 'mvn --version'
+
             }
+            stage('two'){
+                when{
+                    branch 'master'
+                }
+                steps{
+                    echo 'TWO'
+                }
             }
         }
 }
