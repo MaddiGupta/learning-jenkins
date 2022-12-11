@@ -21,7 +21,7 @@ post {
  fixed {
   echo "Hello"
  }
- failed{
+ failure{
   echo "failed state"
  }
  cleanup{
