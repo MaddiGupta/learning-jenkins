@@ -16,4 +16,16 @@ pipeline{
         }
     }
 
+    post {
+        fixed {
+            echo "Hello"
+        }
+        failure {
+            echo "Failed State"
+        }
+        cleanup {
+            echo "Common steps"
+        }
+    }
+
 }
