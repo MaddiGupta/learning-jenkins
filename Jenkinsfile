@@ -56,4 +56,16 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+
+     stages {
+        stage("One") {
+            steps {
+                sh 'echo URL = ${SAMPLE_URL}'
+                echo SAMPLE_URL
+                echo SSH
+                echo PERSON
+            }
+        }
+
+     }
 }
