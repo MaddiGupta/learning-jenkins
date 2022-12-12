@@ -113,7 +113,7 @@ pipeline {
 
         stage('Code Build') {
             steps {
-                 sh 'mvn install -maven'
+                 sh 'mvn check --threads.test.skip=true'
             }
         }
 
