@@ -113,7 +113,7 @@ pipeline {
 
         stage('Code Build') {
             steps {
-                 sh 'mvn install -Dmaven'
+                 sh 'mvn install -maven'
             }
         }
 
