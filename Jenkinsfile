@@ -86,8 +86,8 @@ pipeline {
     }
 
     environment {
-        APP_NAME = "DCUBE_APP",
-        APP_ENV  = "DEV"
+      APP_NAME = "DCUBE_APP"
+      APP_ENV = "DEV"
     }
 
     stages {
@@ -117,7 +117,7 @@ pipeline {
             }
         }
 
-        stage('Priting All Global Variables') {
+        stage('Printing All Global Variables') {
             steps {
                 sh """
                 env
