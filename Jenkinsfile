@@ -75,7 +75,7 @@ pipeline {
     }
 
     tools {
-        maven 'maven3'
+        maven 'maven'
     }
 
     options {
@@ -105,8 +105,8 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/master']],
-                    userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/MaddiGupta/learning-jenkins.git']]
                 ])
             }
         }
