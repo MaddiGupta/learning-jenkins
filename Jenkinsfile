@@ -113,7 +113,7 @@ pipeline {
 
         stage('Code Build') {
             steps {
-                 sh 'mvn check --version.test.skip=true'
+                 sh 'mvn check --version'
             }
         }
 
