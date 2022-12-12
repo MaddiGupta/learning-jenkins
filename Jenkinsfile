@@ -113,7 +113,7 @@ pipeline {
 
         stage('Code Build') {
             steps {
-                 sh 'mvn check --threads'
+                 sh 'mvn check --version'
             }
         }
 
